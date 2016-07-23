@@ -1,0 +1,121 @@
+$widget-bg: #2a2a2a;
+
+.speedometer {
+  background: $widget-bg;
+  color: #dfdfdf;
+  width: 442px;
+  height: 366px;
+  padding: 18px;
+  box-sizing: border-box;
+
+  &:not([hidden]) {
+    display: inline-flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &__value-label {
+    font-size: 100px;
+    line-height: 1;
+    height: 1em; // devnote: ensure when no text we reserve this space the same
+
+    &[hidden] { // devnote: when hidden we still want to reserve layout
+      display: block;
+      opacity: 0;
+    }
+  }
+
+  &__meter {
+    width: 82%;
+    padding-bottom: 41%;
+    height: 0;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      transform: translateY(50%);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 22px;
+      height: 22px;
+      box-sizing: border-box;
+      border-radius: 100%;
+      border: 6px solid;
+    }
+  }
+
+  &__dial {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 200%;
+      border-radius: 100%;
+      border: 25px solid;
+      box-sizing: border-box;
+    }
+  }
+
+  &__pointer {
+    transition: transform 700ms ease-out;
+    transform-origin: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 25px;
+    height: 20px;
+
+    &::before {
+      content: '';
+      background: $widget-bg;
+      backface-visibility: hidden; // devnote: avoids glitchy rendering in blink
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 180px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    &::after {
+      content: '';
+      background: currentColor;
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 149px;
+      width: 7px;
+      border-radius: 999px;
+      box-sizing: border-box;
+    }
+  }
+
+  &__labels {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+    margin-top: 5px;
+    font-size: 40px;
+
+    div {
+      flex: 0 0 100px;
+      text-align: center;
+    }
+  }
+}
