@@ -14,14 +14,14 @@ To demo the component, run `npm start` from the `demo` directory, once ready, th
 
 # Worklog
 
-  0-10  mins - setup of basic webpack + karma + enzyme
- 10-15  mins - R&D into options for locale formatting (currency string from number and currency type)
- 15-20  mins - add in Intl shim to polyfill Intl support during testing
- 20-60  mins - writing unit tests and (unstyled, dom only) implementation to assert rendered dom aspects (labels)
- 60-105 mins - unit tests and (unstyled, dom only) implementation for pointer positioning and validation of valid property combinations
-105-125 mins - finish property validation and unit tests for property changes and component creation
-125-210 mins - implementation of demo view
-210-240 mins - document and commit
+-  0-10  mins - setup of basic webpack + karma + enzyme
+- 10-15  mins - R&D into options for locale formatting (currency string from number and currency type)
+- 15-20  mins - add in Intl shim to polyfill Intl support during testing
+- 20-60  mins - writing unit tests and (unstyled, dom only) implementation to assert rendered dom aspects (labels)
+- 60-105 mins - unit tests and (unstyled, dom only) implementation for pointer positioning and validation of valid property combinations
+- 105-125 mins - finish property validation and unit tests for property changes and component creation
+- 125-210 mins - implementation of demo view
+- 210-240 mins - document and commit
 
 # What to work on next
 - inline documentation for speedometer component
