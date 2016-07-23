@@ -1,0 +1,18 @@
+{
+    "presets": ["es2015"],
+    "plugins": [
+      "syntax-decorators",
+      "syntax-export-extensions",
+      "syntax-async-functions",
+      "syntax-async-generators",
+      "syntax-function-bind",
+      "syntax-jsx",
+      "syntax-object-rest-spread",
+      "transform-decorators-legacy",
+      "transform-export-extensions",
+      "transform-regenerator",
+      "transform-function-bind",
+      "transform-react-jsx",
+      "transform-object-rest-spread"
+    ]
+}
