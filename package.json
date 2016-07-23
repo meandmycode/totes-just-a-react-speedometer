@@ -49,8 +49,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS",
-    "test:watch": "./node_modules/karma/bin/karma start"
+    "test": "npm i && ./node_modules/karma/bin/karma start --single-run --browsers PhantomJS",
+    "test:watch": "npm i && ./node_modules/karma/bin/karma start"
   },
   "repository": {
     "type": "git",
